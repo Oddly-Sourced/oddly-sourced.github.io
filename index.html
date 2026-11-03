@@ -27,6 +27,12 @@ ol { list-style: none; padding: 0; margin: 0; }
 .calc { margin: 0; color: var(--muted); }
 footer { margin-top: 36px; padding-top: 16px; border-top: 2px solid var(--ink); color: var(--muted); font-size: 15px; }
 a.back { color: inherit; }
+/* Back to the home page from the top, for viewers who land here from a YouTube description (user, 2026-11-03). */
+.top { display: inline-flex; align-items: center; gap: 8px; margin: 0 0 22px; padding: 6px 14px 7px; color: inherit; text-decoration: none; font-weight: 800; font-size: 14px;
+  letter-spacing: 0.08em; text-transform: uppercase; border: 3px solid var(--ink); box-shadow: 4px 5px 0 var(--ink); transition: transform 120ms ease, box-shadow 120ms ease; }
+.top:hover, .top:focus-visible { transform: translate(-1px, -1px); box-shadow: 6px 7px 0 var(--vermilion); outline: none; }
+.top:active { transform: translate(2px, 2px); box-shadow: 2px 3px 0 var(--ink); }
+.top span { color: var(--vermilion); font-size: 18px; line-height: 1; }
 .head { display: flex; align-items: center; gap: 18px; margin-bottom: 28px; }
 .head h1 { margin: 6px 0 6px; }
 .head .lede { margin: 0; }

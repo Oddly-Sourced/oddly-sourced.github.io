@@ -27,6 +27,12 @@ ol { list-style: none; padding: 0; margin: 0; }
 .calc { margin: 0; color: var(--muted); }
 footer { margin-top: 36px; padding-top: 16px; border-top: 2px solid var(--ink); color: var(--muted); font-size: 15px; }
 a.back { color: inherit; }
+/* Back to the home page from the top, for viewers who land here from a YouTube description (user, 2026-11-03). */
+.top { display: inline-flex; align-items: center; gap: 8px; margin: 0 0 22px; padding: 6px 14px 7px; color: inherit; text-decoration: none; font-weight: 800; font-size: 14px;
+  letter-spacing: 0.08em; text-transform: uppercase; border: 3px solid var(--ink); box-shadow: 4px 5px 0 var(--ink); transition: transform 120ms ease, box-shadow 120ms ease; }
+.top:hover, .top:focus-visible { transform: translate(-1px, -1px); box-shadow: 6px 7px 0 var(--vermilion); outline: none; }
+.top:active { transform: translate(2px, 2px); box-shadow: 2px 3px 0 var(--ink); }
+.top span { color: var(--vermilion); font-size: 18px; line-height: 1; }
 .head { display: flex; align-items: center; gap: 18px; margin-bottom: 28px; }
 .head h1 { margin: 6px 0 6px; }
 .head .lede { margin: 0; }
@@ -51,7 +57,8 @@ a.back { color: inherit; }
 .sign { text-align: center; margin: 56px 0 0; }
 </style>
 </head>
-<body><main><div class="brand">Oddly <b>Sourced</b> · Exhibit 001</div>
+<body><main><a class="top" href="../"><span aria-hidden="true">←</span>All exhibits</a>
+<div class="brand">Oddly <b>Sourced</b> · Exhibit 001</div>
 <h1>The Strange Reason a Raft Survivor Got His Own Law</h1>
 <p class="lede">Every orange seal in the video (S1, S2…) points to a row on this page: the sentence it supports, the sources and a short quote from them. Found a source that tells it differently? Tell us in the comments on YouTube.</p>
 <ol>
@@ -776,5 +783,5 @@ a.back { color: inherit; }
   </div>
 </li>
 </ol>
-<footer><p><strong>Narration:</strong> synthetic voice (ElevenLabs). <strong>Illustrations</strong> generated with Google Gemini and printed in the channel's linocut style. <strong>Photos:</strong> U.S. Navy (public domain), the London Gazette (Open Government Licence v3.0), U.S. Statutes at Large (public domain). <strong>Music:</strong> channel theme (Eleven Music).</p><p><a class="back" href="../">All episodes</a></p></footer></main></body>
+<footer><p><strong>Narration:</strong> synthetic voice (ElevenLabs). <strong>Illustrations</strong> generated with Google Gemini and printed in the channel's linocut style. <strong>Photos:</strong> U.S. Navy (public domain), the London Gazette (Open Government Licence v3.0), U.S. Statutes at Large (public domain). <strong>Music:</strong> channel theme (Eleven Music).</p><p><a class="back" href="../">← All exhibits</a></p></footer></main></body>
 </html>
