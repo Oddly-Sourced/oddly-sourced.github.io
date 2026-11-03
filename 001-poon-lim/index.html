@@ -27,6 +27,20 @@ ol { list-style: none; padding: 0; margin: 0; }
 .calc { margin: 0; color: var(--muted); }
 footer { margin-top: 36px; padding-top: 16px; border-top: 2px solid var(--ink); color: var(--muted); font-size: 15px; }
 a.back { color: inherit; }
+.head { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.head h1 { margin: 10px 0 8px; }
+.head img { width: clamp(64px, 14vw, 96px); height: auto; flex: none; }
+.eps { display: grid; gap: 22px; margin-top: 8px; }
+/* Episode card: a printed block. Hover slides the ink offset into a vermilion one, press stamps it down. */
+.ep { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 18px; padding: 18px 20px; color: inherit; text-decoration: none;
+  background: var(--paper); border: 3px solid var(--ink); box-shadow: 7px 8px 0 var(--ink); transition: transform 120ms ease, box-shadow 120ms ease; }
+.ep:hover, .ep:focus-visible { transform: translate(-2px, -2px); box-shadow: 10px 11px 0 var(--vermilion); outline: none; }
+.ep:active { transform: translate(3px, 3px); box-shadow: 3px 4px 0 var(--ink); }
+.ep .num { width: 60px; height: 60px; border-radius: 50%; background: var(--vermilion); color: #181412; border: 4px solid var(--ink); display: grid; place-items: center; font-weight: 800; font-size: 17px; }
+.ep .ex { display: block; color: var(--vermilion); font-weight: 800; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; }
+.ep .t { display: block; font-weight: 800; font-size: clamp(22px, 4.6vw, 30px); line-height: 1.1; font-variation-settings: "wdth" 88; }
+.ep .meta { display: block; color: var(--muted); font-size: 15px; margin-top: 2px; }
+.ep .go { font-size: 28px; font-weight: 800; }
 </style>
 </head>
 <body><main><div class="brand">Oddly <b>Sourced</b> · Exhibit 001</div>
