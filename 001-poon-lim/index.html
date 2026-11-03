@@ -30,6 +30,8 @@ a.back { color: inherit; }
 .head { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
 .head h1 { margin: 10px 0 8px; }
 .head img { width: clamp(64px, 14vw, 96px); height: auto; flex: none; }
+/* The seal's black ring disappears on a dark page: print it on a paper disc there. */
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .head img { background: #ECE2CD; border-radius: 50%; padding: 5px; } }
 .eps { display: grid; gap: 22px; margin-top: 8px; }
 /* Episode card: a printed block. Hover slides the ink offset into a vermilion one, press stamps it down. */
 .ep { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 18px; padding: 18px 20px; color: inherit; text-decoration: none;
