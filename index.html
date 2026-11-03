@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Oddly Sourced · Sources</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&display=swap">
+<style>
+:root { --paper: #ECE2CD; --ink: #181412; --vermilion: #E4572E; --muted: rgba(24, 20, 18, 0.62); --rule: rgba(24, 20, 18, 0.18); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --paper: #181412; --ink: #ECE2CD; --muted: rgba(236, 226, 205, 0.66); --rule: rgba(236, 226, 205, 0.2); } }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: "Bricolage Grotesque", system-ui, sans-serif; font-size: 17px; line-height: 1.5; }
+main { max-width: 860px; margin: 0 auto; padding: 40px 16px 80px; }
+.brand { font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; font-size: 13px; }
+.brand b { color: var(--vermilion); }
+h1 { font-size: clamp(30px, 6vw, 48px); line-height: 1.05; margin: 10px 0 8px; font-variation-settings: "wdth" 88; }
+.lede { color: var(--muted); margin: 0 0 28px; }
+ol { list-style: none; padding: 0; margin: 0; }
+.row { display: grid; grid-template-columns: 64px 1fr; gap: 14px; padding: 16px 0; border-top: 1px solid var(--rule); scroll-margin-top: 16px; }
+.row:target { background: color-mix(in srgb, var(--vermilion) 12%, transparent); }
+.seal { width: 52px; height: 52px; border-radius: 50%; background: var(--vermilion); color: #181412; font-weight: 800; font-size: 15px; display: grid; place-items: center; border: 4px solid var(--ink); }
+.claim { margin: 0 0 6px; font-weight: 700; }
+.links { margin: 0; padding-left: 18px; }
+.links a { color: inherit; text-decoration-color: var(--vermilion); text-underline-offset: 3px; overflow-wrap: anywhere; }
+.quote { margin: 6px 0 0; color: var(--muted); font-style: italic; }
+footer { margin-top: 36px; padding-top: 16px; border-top: 2px solid var(--ink); color: var(--muted); font-size: 15px; }
+a.back { color: inherit; }
+</style>
+</head>
+<body><main><div class="brand">Oddly <b>Sourced</b></div><h1>Sources</h1><p class="lede">Strange things that actually happened. Every claim sourced.</p><ol><li class="row"><div class="seal">001</div><div class="body"><p class="claim"><a href="./001-poon-lim/">Poon Lim</a></p></div></li></ol></main></body>
+</html>
