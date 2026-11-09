@@ -1,0 +1,396 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sources · Why Turkey Stands Still at 9:05 Every November 10</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&display=swap">
+<style>
+:root { --paper: #ECE2CD; --ink: #181412; --vermilion: #E4572E; --muted: rgba(24, 20, 18, 0.62); --rule: rgba(24, 20, 18, 0.18); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --paper: #181412; --ink: #ECE2CD; --muted: rgba(236, 226, 205, 0.66); --rule: rgba(236, 226, 205, 0.2); } }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: "Bricolage Grotesque", system-ui, sans-serif; font-size: 17px; line-height: 1.5; }
+main { max-width: 860px; margin: 0 auto; padding: 40px 16px 80px; }
+.brand { font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; font-size: 13px; }
+.brand b { color: var(--vermilion); }
+h1 { font-size: clamp(30px, 6vw, 48px); line-height: 1.05; margin: 10px 0 8px; font-variation-settings: "wdth" 88; }
+.lede { color: var(--muted); margin: 0 0 28px; }
+ol { list-style: none; padding: 0; margin: 0; }
+.row { display: grid; grid-template-columns: 64px 1fr; gap: 14px; padding: 16px 0; border-top: 1px solid var(--rule); scroll-margin-top: 16px; }
+.row:target { background: color-mix(in srgb, var(--vermilion) 12%, transparent); }
+.seal { width: 52px; height: 52px; border-radius: 50%; background: var(--vermilion); color: #181412; font-weight: 800; font-size: 15px; display: grid; place-items: center; border: 4px solid var(--ink); }
+.claim { margin: 0 0 6px; font-weight: 700; }
+.links { margin: 0; padding-left: 18px; }
+.links a { color: inherit; text-decoration-color: var(--vermilion); text-underline-offset: 3px; overflow-wrap: anywhere; }
+.quote { margin: 6px 0 0; color: var(--muted); font-style: italic; }
+.calc { margin: 0; color: var(--muted); }
+footer { margin-top: 36px; padding-top: 16px; border-top: 2px solid var(--ink); color: var(--muted); font-size: 15px; }
+a.back { color: inherit; }
+/* Back to the home page from the top, for viewers who land here from a YouTube description (user, 2026-11-03). */
+.top { display: inline-flex; align-items: center; gap: 8px; margin: 0 0 22px; padding: 6px 14px 7px; color: inherit; text-decoration: none; font-weight: 800; font-size: 14px;
+  letter-spacing: 0.08em; text-transform: uppercase; border: 3px solid var(--ink); box-shadow: 4px 5px 0 var(--ink); transition: transform 120ms ease, box-shadow 120ms ease; }
+.top:hover, .top:focus-visible { transform: translate(-1px, -1px); box-shadow: 6px 7px 0 var(--vermilion); outline: none; }
+.top:active { transform: translate(2px, 2px); box-shadow: 2px 3px 0 var(--ink); }
+.top span { color: var(--vermilion); font-size: 18px; line-height: 1; }
+.head { display: flex; align-items: center; gap: 18px; margin-bottom: 28px; }
+.head h1 { margin: 6px 0 6px; }
+.head .lede { margin: 0; }
+.seal-link { flex: none; display: block; border-radius: 50%; transition: transform 120ms ease; }
+.seal-link:hover, .seal-link:focus-visible { transform: rotate(-8deg) scale(1.05); outline: none; }
+.seal-link:focus-visible { box-shadow: 0 0 0 3px var(--vermilion); }
+.head img { width: clamp(72px, 16vw, 104px); height: auto; display: block; }
+/* The seal's black ring disappears on a dark page: print it on a paper disc there. */
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .head img { background: #ECE2CD; border-radius: 50%; padding: 5px; } }
+.eps { display: grid; gap: 22px; margin-top: 8px; }
+/* Episode card: a printed block. Hover slides the ink offset into a vermilion one, press stamps it down. */
+.ep { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 18px; padding: 18px 20px; color: inherit; text-decoration: none;
+  background: var(--paper); border: 3px solid var(--ink); box-shadow: 7px 8px 0 var(--ink); transition: transform 120ms ease, box-shadow 120ms ease; }
+.ep:hover, .ep:focus-visible { transform: translate(-2px, -2px); box-shadow: 10px 11px 0 var(--vermilion); outline: none; }
+.ep:active { transform: translate(3px, 3px); box-shadow: 3px 4px 0 var(--ink); }
+.ep .num { width: 60px; height: 60px; border-radius: 50%; background: var(--vermilion); color: #181412; border: 4px solid var(--ink); display: grid; place-items: center; font-weight: 800; font-size: 17px; }
+.ep .ex { display: block; color: var(--vermilion); font-weight: 800; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; }
+.ep .t { display: block; font-weight: 800; font-size: clamp(22px, 4.6vw, 30px); line-height: 1.1; font-variation-settings: "wdth" 88; }
+.ep .meta { display: block; color: var(--muted); font-size: 15px; margin-top: 2px; }
+.ep .go { font-size: 28px; font-weight: 800; }
+/* Home: the wordmark signs the page under the list, so it moves down as exhibits are added. */
+.sign { text-align: center; margin: 56px 0 0; }
+/* Shorts blocks: each Short's own seal numbering (its S1 is not the episode's S1). */
+.shorts-h { font-size: clamp(24px, 4.6vw, 32px); margin: 48px 0 8px; padding-top: 18px; border-top: 2px solid var(--ink); }
+.short { margin-top: 28px; scroll-margin-top: 16px; }
+.short h2 { font-size: 22px; margin: 0 0 4px; }
+.short:target h2 { color: var(--vermilion); }
+.seal.minor { background: transparent; color: var(--ink); border-style: dashed; }
+</style>
+</head>
+<body><main><a class="top" href="../"><span aria-hidden="true">←</span>All exhibits</a>
+<div class="brand">Oddly <b>Sourced</b> · Exhibit 002</div>
+<h1>Why Turkey Stands Still at 9:05 Every November 10</h1>
+<p class="lede">Every orange seal in the video (S1, S2…) points to a row on this page: the sentence it supports, the sources and a short quote from them. Found a source that tells it differently? Tell us in the comments on YouTube.</p>
+<ol>
+<li class="row" id="s1">
+  <div class="seal">S1</div>
+  <div class="body">
+    <p class="claim">Turkey's education ministry tells schools that at five past nine, with a siren, a command or a bugle, everyone stands for two minutes.</p>
+    <ul class="links"><li><a href="https://web.archive.org/web/20161214132559/http://mevzuat.meb.gov.tr/html/2594_0.html" rel="noopener">Millî Eğitim Bakanlığı Bayrak Törenleri Yönergesi, md. 9 — MEB, 2007 (Wayback 2016-12-14)</a></li></ul>
+    
+  </div>
+</li>
+<li class="row" id="s2">
+  <div class="seal">S2</div>
+  <div class="body">
+    <p class="claim">Every tenth of November, at five past nine in the morning, sirens sound across Turkey and much of the country stands still.</p>
+    <ul class="links"><li><a href="https://dergipark.org.tr/tr/download/article-file/879084" rel="noopener">Türkiye'de 10 Kasım Törenleri: &quot;İlk Matem&quot; 10 Kasım 1939'dan … — Hakan Uzun, Çağdaş Türkiye Tarihi Araştırmaları Dergisi XIX/38, 2019</a></li><li><a href="https://doi.org/10.33431/belgi.1017156" rel="noopener">Yerel Basında … 10 Kasım Anma Törenleri: Adana, Mersin ve Tarsus (1938-1950) — Oğuz Kalafat, Belgi 23, 2022</a></li></ul>
+    
+  </div>
+</li>
+<li class="row" id="s3">
+  <div class="seal">S3</div>
+  <div class="body">
+    <p class="claim">The answer runs backwards, through a doctors' bulletin, a death sentence and a broken pocket watch.</p>
+    <ul class="links"><li><a href="https://commons.wikimedia.org/wiki/File:Ulus,_10_Kas%C4%B1m_1938.png" rel="noopener">Ulus, 10 İkinciteşrin 1938, 2. basış, ön sayfa — Wikimedia Commons, 1938</a></li></ul>
+    
+  </div>
+</li>
+<li class="row" id="s4">
+  <div class="seal">S4</div>
+  <div class="body">
+    <p class="claim">And the man those newspapers mourned had been sentenced to death by the government he once served.</p>
+    <ul class="links"><li><a href="https://dergipark.org.tr/tr/download/article-file/20542" rel="noopener">Damat Ferit Paşa’nın IV. Hükümeti Döneminde Kuvâ-yı Milliye İleri Gelenleri Hakkında Verilen İdam Kararları — Osman Akandere, Atatürk Yolu 43, 2009</a></li><li><a href="https://ataturkansiklopedisi.gov.tr/bilgi/durrizade-abdullah-1869-1923/?pdf=3915" rel="noopener">Dürrizâde Abdullah — Sinan Başaran, Atatürk Ansiklopedisi, n.d.</a></li></ul>
+    <p class="quote">“10 Nisan’da Kuvay-i Milliye önderlerini “âsi” olarak suçlayan bir hükûmet bildirisi”</p>
+  </div>
+</li>
+<li class="row" id="s5">
+  <div class="seal">S5</div>
+  <div class="body">
+    <p class="claim">On August 10th, at Chunuk Bair, a piece of shrapnel hit him in the chest.</p>
+    <ul class="links"><li><a href="https://dergipark.org.tr/tr/download/article-file/514446" rel="noopener">Conkbayırı’nda Atatürk’ün Hayatını Kurtaran Saat — Mevlüt Çelebi, Belgi 16, 2018</a></li><li><a href="https://canakkaletarihialan.gov.tr/en/visit/martyrs-and-monuments/the-place-where-ataturks-watch-was-smashed" rel="noopener">The Place where Atatürk’s Watch was Smashed — Çanakkale Savaşları Gelibolu Tarihi Alan Başkanlığı, n.d.</a></li></ul>
+    <p class="quote">“the watch on his right breast saved him”</p>
+  </div>
+</li>
+<li class="row" id="s6">
+  <div class="seal">S6</div>
+  <div class="body">
+    <p class="claim">The silence is for one man, Mustafa Kemal Atatürk, the founder and first president of the Turkish Republic.</p>
+    <ul class="links"><li><a href="https://ataturkansiklopedisi.gov.tr/bilgi/ataturk-gazi-mustafa-kemal-1881-10-kasim-1938/?pdf=3993" rel="noopener">Atatürk, Gazi Mustafa Kemal (1881-10 Kasım 1938) — Şerafettin Turan, Atatürk Ansiklopedisi (AAM), n.d.</a></li></ul>
+    
+  </div>
+</li>
+<li class="row" id="s7">
+  <div class="seal">S7</div>
+  <div class="body">
+    <p class="claim">By regulation, flags on official buildings fly at half-mast every tenth of November, and the flag at his mausoleum in Ankara is lowered on that day alone.</p>
+    <ul class="links"><li><a href="https://web.archive.org/web/20150220144025/http://www.mevzuat.gov.tr/MevzuatMetin/2.5.859034.pdf" rel="noopener">Türk Bayrağı Tüzüğü — Bakanlar Kurulu Kararı 85/9034, Resmî Gazete 18697, 1985 (mevzuat.gov.tr, Wayback 2015-02-20)</a></li></ul>
+    
+  </div>
+</li>
+<li class="row" id="s8">
+  <div class="seal">S8</div>
+  <div class="body">
+    <p class="claim">And not everything was left to choice: the programme for a ceremony in Mersin that year made black clothing compulsory.</p>
+    <ul class="links"><li><a href="https://doi.org/10.33431/belgi.1017156" rel="noopener">Yerel Basında … 10 Kasım Anma Törenleri: Adana, Mersin ve Tarsus (1938-1950) — Oğuz Kalafat, Belgi 23, 2022</a></li></ul>
+    
+  </div>
+</li>
+<li class="row" id="s9">
+  <div class="seal">S9</div>
+  <div class="body">
+    <p class="claim">It said the President had died in a deep coma, on Thursday morning, at five past nine, at Dolmabahçe Palace in Istanbul.</p>
+    <ul class="links"><li><a href="https://ataturkansiklopedisi.gov.tr/bilgi/ataturk-ve-dolmabahce-sarayi/?pdf=3792" rel="noopener">Atatürk ve Dolmabahçe Sarayı — N. Yazıcı, E. Kısıklı, Atatürk Ansiklopedisi, n.d.</a></li></ul>
+    
+  </div>
+</li>
+<li class="row" id="s10">
+  <div class="seal">S10</div>
+  <div class="body">
+    <p class="claim">His aide and childhood friend, Salih Bozok, shot himself on hearing of his death.</p>
+    <ul class="links"><li><a href="https://ataturkansiklopedisi.gov.tr/bilgi/salih-bozok-1881-1941/?pdf=3391" rel="noopener">Salih Bozok (1881-1941) — Fahri Maden, Atatürk Ansiklopedisi, n.d.</a></li></ul>
+    
+  </div>
+</li>
+<li class="row" id="s11">
+  <div class="seal">S11</div>
+  <div class="body">
+    <p class="claim">Florya · 1937 · His aide, Salih Bozok</p>
+    <ul class="links"><li><a href="https://web.archive.org/web/20160304080037/http://www.kultur.gov.tr/genel/galeri/ataturk/ataturkresimleri/5/pages/0216_01.htm" rel="noopener">Atatürk resimleri, 0216_01 — T.C. Kültür ve Turizm Bakanlığı, Wayback 2016-03-04</a></li></ul>
+    
+  </div>
+</li>
+<li class="row" id="s12">
+  <div class="seal">S12</div>
+  <div class="body">
+    <p class="claim">According to one story, he said the commander-in-chief cannot go without his aide.</p>
+    <ul class="links"><li><a href="https://acikbilim.yok.gov.tr/handle/20.500.12812/690429" rel="noopener">Atatürk`ün başyaveri Salih Bozok`un hayatı ve kişiliği (1881-1941) — Feyyaz Koç, YL tezi (dan. Filiz Çolak), 2019, YÖK Açık Bilim</a></li></ul>
+    
+  </div>
+</li>
+<li class="row" id="s13">
+  <div class="seal">S13</div>
+  <div class="body">
+    <p class="claim">From twenty-five past eleven that morning, all the flags came down to half-mast.</p>
+    <ul class="links"><li><a href="https://dergipark.org.tr/tr/download/article-file/20503" rel="noopener">Atatürk’ün Cenaze Töreni: Yas ve Metanet — Tunç Boran, Atatürk Yolu 47, 2011</a></li><li><a href="https://ataturkansiklopedisi.gov.tr/bilgi/ataturkun-cenazesinin-istanbuldan-ankaraya-nakli/?pdf=3784" rel="noopener">Atatürk’ün Cenazesinin İstanbul’dan Ankara’ya Nakli — Yüksel Özgen, Atatürk Ansiklopedisi, n.d.</a></li><li><a href="https://dergipark.org.tr/tr/download/article-file/879084" rel="noopener">Türkiye’de 10 Kasım Törenleri — Hakan Uzun, ÇTTAD XIX/38, 2019</a></li></ul>
+    
+  </div>
+</li>
+<li class="row" id="s14">
+  <div class="seal">S14</div>
+  <div class="body">
+    <p class="claim">In Athens, the newspaper Athinaika wrote that being loved and mourned after this much is an exception in the nations' history.</p>
+    <ul class="links"><li><a href="https://www.ktb.gov.tr/EN-104210/greece.html" rel="noopener">Greece (world press on Atatürk's death) — T.C. Kültür ve Turizm Bakanlığı, n.d.</a></li></ul>
+    <p class="quote">“We, the Royal Government, the Hellenic Nation and I personally share the national mourning”</p>
+  </div>
+</li>
+<li class="row" id="s15">
+  <div class="seal">S15</div>
+  <div class="body">
+    <p class="claim">At the 1919 Paris Peace Conference, Greece's prime minister, Eleftherios Venizelos, had asked for Izmir and western Anatolia, and that May, Greek troops landed at Izmir.</p>
+    <ul class="links"><li><a href="https://ataturkansiklopedisi.gov.tr/bilgi/eleftherios-kyriakos-venizelos-1864-1936/?pdf=3275" rel="noopener">Eleftherios Kyriakos Venizelos (1864-1936) — Esra Özsüer, Atatürk Ansiklopedisi, n.d.</a></li></ul>
+    
+  </div>
+</li>
+<li class="row" id="s16">
+  <div class="seal">S16</div>
+  <div class="body">
+    <p class="claim">In 1934, the same man nominated Atatürk for the Nobel Peace Prize.</p>
+    <ul class="links"><li><a href="https://www.digitalarkivet.no/en/source/185732" rel="noopener">Nomination of Mustafa Pascha Kemal (Turkey) for the Nobel Peace Prize for 1934 — Arkivverket / Digitalarkivet, NOBEL/NOM/1934/034</a></li><li><a href="https://ataturkansiklopedisi.gov.tr/bilgi/eleftherios-kyriakos-venizelos-1864-1936/?pdf=3275" rel="noopener">Eleftherios Kyriakos Venizelos (1864-1936) — Esra Özsüer, Atatürk Ansiklopedisi, n.d.</a></li></ul>
+    <p class="quote">“Nobel Peace Prize for 1934. Nominated by E. K. Venisélos (Greece)”</p>
+  </div>
+</li>
+<li class="row" id="s17">
+  <div class="seal">S17</div>
+  <div class="body">
+    <p class="claim">He had also written a geometry guide by hand, over the winter of 1936 into 1937, at Dolmabahçe, in plain Turkish terms.</p>
+    <ul class="links"><li><a href="https://hist202.cankaya.edu.tr/uploads/files/Ataturkun_Hazirlad%C4%B1gi_Geometri_Terimleri_Kitabi_zeki_dilek.pdf" rel="noopener">Atatürk'ün Hazırladığı Geometri Terimleri Kitabı — Zeki Dilek, Atatürk Araştırma Merkezi Dergisi 63, 2005</a></li></ul>
+    <p class="quote">“silindir, pürüzma, koni, piramet ve yürenin”</p>
+  </div>
+</li>
+<li class="row" id="s18">
+  <div class="seal">S18</div>
+  <div class="body">
+    <p class="claim">Oddly enough, when it was printed in 1937, it carried no author's name.</p>
+    <ul class="links"><li><a href="https://ada.atilim.edu.tr/entities/publication/71515faf-8c00-43a1-a05f-c7e12bbf1207" rel="noopener">Anılması Gereken Bir Kitap: Geometri — O. Tuncay Başkaya, Bilim ve Teknoloji, 2013 (Atılım Üniv. açık arşiv kaydı)</a></li></ul>
+    
+  </div>
+</li>
+<li class="row" id="s19">
+  <div class="seal">S19</div>
+  <div class="body">
+    <p class="claim">Surnames came to Turkey by law in 1934.</p>
+    <ul class="links"><li><a href="https://ataturkansiklopedisi.gov.tr/bilgi/soyadi-kanunu/?pdf=3366" rel="noopener">Soyadı Kanunu — Oğuz Aytepe, Atatürk Ansiklopedisi, n.d.</a></li></ul>
+    
+  </div>
+</li>
+<li class="row" id="s20">
+  <div class="seal">S20</div>
+  <div class="body">
+    <p class="claim">On November 24th, 1934, every member of parliament present voted to give him a surname of his own.</p>
+    <ul class="links"><li><a href="https://dergipark.org.tr/tr/download/article-file/748196" rel="noopener">1934 Tarihli Soy Adı Kanunu Uygulamaları ve Malatya Örneği — Mehmet Korkud Aydın, Belgi 18, 2019</a></li></ul>
+    
+  </div>
+</li>
+<li class="row" id="s21">
+  <div class="seal">S21</div>
+  <div class="body">
+    <p class="claim">It was Atatürk.</p>
+    <ul class="links"><li><a href="https://tr.wikisource.org/wiki/Kemal_%C3%B6z_atl%C4%B1_C%C3%BCmhur_Reisimize_verilen_soy_ad%C4%B1_hakk%C4%B1nda_kanun" rel="noopener">Kemal öz atlı Cümhur Reisimize verilen soy adı hakkında kanun (Kanun 2587) — Resmî Gazete 2865, 1934, Vikikaynak transkripsiyonu</a></li><li><a href="https://ataturkansiklopedisi.gov.tr/bilgi/soyadi-kanunu/?pdf=3366" rel="noopener">Soyadı Kanunu — Oğuz Aytepe, Atatürk Ansiklopedisi, n.d.</a></li><li><a href="https://dergipark.org.tr/tr/download/article-file/887624" rel="noopener">Atatürk Döneminde Soyadı Kanunu’nun Çankırı’da Uygulanması — M. Ş. Özcan, İ. Üzen, ÇKÜ SBE Dergisi 10, 2019</a></li><li><a href="https://dergipark.org.tr/tr/download/article-file/4254922" rel="noopener">Soyadı Kanunu’nun … Ulusal Basının Rolü — S. Özdağ, Pamukkale Üniv. SBE Dergisi 67, 2025</a></li></ul>
+    <p class="quote">“Kanun No. 2587 Kabul Tarihi: 24/11/1934”</p>
+  </div>
+</li>
+<li class="row" id="s22">
+  <div class="seal">S22</div>
+  <div class="body">
+    <p class="claim">Ata means father, or forefather.</p>
+    <ul class="links"><li><a href="https://web.archive.org/web/20230624072530/https://sozluk.gov.tr/gts?ara=ata" rel="noopener">ata — Güncel Türkçe Sözlük, Türk Dil Kurumu (sozluk.gov.tr, Wayback 2023-06-24)</a></li></ul>
+    
+  </div>
+</li>
+<li class="row" id="s23">
+  <div class="seal">S23</div>
+  <div class="body">
+    <p class="claim">No one else could ever take that name.</p>
+    <ul class="links"><li><a href="https://dergipark.org.tr/tr/download/article-file/887624" rel="noopener">Atatürk Döneminde Soyadı Kanunu’nun Çankırı’da Uygulanması — M. Ş. Özcan, İ. Üzen, ÇKÜ SBE Dergisi 10, 2019</a></li></ul>
+    
+  </div>
+</li>
+<li class="row" id="s24">
+  <div class="seal">S24</div>
+  <div class="body">
+    <p class="claim">In December 1934, Turkish women won the right to vote and to stand for parliament.</p>
+    <ul class="links"><li><a href="https://ataturkansiklopedisi.gov.tr/bilgi/ataturk-doneminde-kadin-haklari/?pdf=3821" rel="noopener">Atatürk Döneminde Kadın Hakları — Ayten Sezer Arığ, Atatürk Ansiklopedisi, n.d.</a></li><li><a href="https://ataturkansiklopedisi.gov.tr/bilgi/kadin-temsiliyeti-ve-1935-secimleri/?pdf=3549" rel="noopener">Kadın Temsiliyeti ve 1935 Seçimleri — Hatice Güzel Mumyakmaz, Atatürk Ansiklopedisi, n.d.</a></li></ul>
+    
+  </div>
+</li>
+<li class="row" id="s25">
+  <div class="seal">S25</div>
+  <div class="body">
+    <p class="claim">France waited until 1944.</p>
+    <ul class="links"><li><a href="https://www2.assemblee-nationale.fr/14/evenements/2015/33-premieres-deputees/vers-la-reconnaissance-de-la-citoyennete-des-femmes" rel="noopener">Vers la reconnaissance de la citoyenneté des femmes — Assemblée nationale, 2015</a></li><li><a href="https://www.pewresearch.org/short-reads/2020/10/05/key-facts-about-womens-suffrage-around-the-world-a-century-after-u-s-ratified-19th-amendment/" rel="noopener">Key facts about women’s suffrage around the world — Pew Research Center, 2020</a></li></ul>
+    <p class="quote">“les femmes sont électrices et éligibles dans les mêmes conditions que les hommes”</p>
+  </div>
+</li>
+<li class="row" id="s26">
+  <div class="seal">S26</div>
+  <div class="body">
+    <p class="claim">Switzerland waited until 1971.</p>
+    <ul class="links"><li><a href="https://www.pewresearch.org/short-reads/2020/10/05/key-facts-about-womens-suffrage-around-the-world-a-century-after-u-s-ratified-19th-amendment/" rel="noopener">Key facts about women’s suffrage around the world — Pew Research Center, 2020</a></li></ul>
+    <p class="quote">“At least 19 other countries also did so prior to the U.S. passage”</p>
+  </div>
+</li>
+<li class="row" id="s27">
+  <div class="seal">S27</div>
+  <div class="body">
+    <p class="claim">In the 1935 election, held in what was then a one-party state, seventeen women entered parliament.</p>
+    <ul class="links"><li><a href="https://ataturkansiklopedisi.gov.tr/bilgi/kadin-temsiliyeti-ve-1935-secimleri/?pdf=3549" rel="noopener">Kadın Temsiliyeti ve 1935 Seçimleri — Hatice Güzel Mumyakmaz, Atatürk Ansiklopedisi, n.d.</a></li></ul>
+    
+  </div>
+</li>
+<li class="row" id="s28">
+  <div class="seal">S28</div>
+  <div class="body">
+    <p class="claim">To see why people kept that minute, rewind a few more years, to a country where most people could not read.</p>
+    <ul class="links"><li><a href="https://dergipark.org.tr/tr/download/article-file/3792027" rel="noopener">1927 Nüfus Sayımına Göre İçel… — İbrahim Öztürk, Adıyaman Üniv. SBE Dergisi 46, 2024</a></li><li><a href="https://dergipark.org.tr/tr/download/article-file/2576419" rel="noopener">Cumhuriyetimizin İlk Sanayi Sayımı 1927 — Serdar Şahinkaya, n.d.</a></li></ul>
+    
+  </div>
+</li>
+<li class="row" id="s29">
+  <div class="seal">S29</div>
+  <div class="body">
+    <p class="claim">A law of November 1st replaced the old Arabic letters with a Turkish alphabet based on Latin ones.</p>
+    <ul class="links"><li><a href="https://ataturkansiklopedisi.gov.tr/bilgi/harf-devrimi/?pdf=3622" rel="noopener">Harf Devrimi — Bilâl N. Şimşir, Atatürk Ansiklopedisi, n.d.</a></li><li><a href="https://ataturkansiklopedisi.gov.tr/bilgi/millet-mektepleri/?pdf=3485" rel="noopener">Millet Mektepleri — Mustafa Albayrak, Atatürk Ansiklopedisi, n.d.</a></li></ul>
+    
+  </div>
+</li>
+<li class="row" id="s30">
+  <div class="seal">S30</div>
+  <div class="body">
+    <p class="claim">When the Nation's Schools opened on January 1st, 1929, he became their Head Teacher.</p>
+    <ul class="links"><li><a href="https://ataturkansiklopedisi.gov.tr/bilgi/millet-mektepleri/?pdf=3485" rel="noopener">Millet Mektepleri — Mustafa Albayrak, Atatürk Ansiklopedisi, n.d.</a></li></ul>
+    
+  </div>
+</li>
+<li class="row" id="s31">
+  <div class="seal">S31</div>
+  <div class="body">
+    <p class="claim">Just outside Ankara, in 1925, he started a farm on land that experts called swampy, barren and poor.</p>
+    <ul class="links"><li><a href="https://dergipark.org.tr/tr/download/article-file/775851" rel="noopener">Atatürk Orman Çiftliği Yönetim… — Akademik Bakış 72, 2019</a></li><li><a href="https://ataturkansiklopedisi.gov.tr/bilgi/ataturk-orman-ciftligi/?pdf=3794" rel="noopener">Atatürk Orman Çiftliği — İzzet Öztoprak, Atatürk Ansiklopedisi, n.d.</a></li></ul>
+    
+  </div>
+</li>
+<li class="row" id="s32">
+  <div class="seal">S32</div>
+  <div class="body">
+    <p class="claim">The land was bought from private owners.</p>
+    <ul class="links"><li><a href="https://ataturkansiklopedisi.gov.tr/bilgi/ataturk-orman-ciftligi/?pdf=3794" rel="noopener">Atatürk Orman Çiftliği — İzzet Öztoprak, Atatürk Ansiklopedisi, n.d.</a></li></ul>
+    
+  </div>
+</li>
+<li class="row" id="s33">
+  <div class="seal">S33</div>
+  <div class="body">
+    <p class="claim">In 1929, he had a small house built in Yalova, beside a great plane tree.</p>
+    <ul class="links"><li><a href="https://ataturkansiklopedisi.gov.tr/bilgi/yalova-ataturk-kosku/?pdf=3267" rel="noopener">Yalova Atatürk Köşkü — Atatürk Ansiklopedisi, n.d.</a></li></ul>
+    
+  </div>
+</li>
+<li class="row" id="s34">
+  <div class="seal">S34</div>
+  <div class="body">
+    <p class="claim">In July 1919, Mustafa Kemal was an Ottoman general and army inspector, in the eastern city of Erzurum.</p>
+    <ul class="links"><li><a href="https://ataturkansiklopedisi.gov.tr/bilgi/erzurum-kongresi/?pdf=3676" rel="noopener">Erzurum Kongresi — Nurcan Toksoy, Atatürk Ansiklopedisi, n.d.</a></li></ul>
+    
+  </div>
+</li>
+<li class="row" id="s35">
+  <div class="seal">S35</div>
+  <div class="body">
+    <p class="claim">In April 1920, it declared him and his allies rebels, and the Sultan's chief religious official issued fatwas against them.</p>
+    <ul class="links"><li><a href="https://ataturkansiklopedisi.gov.tr/bilgi/durrizade-abdullah-1869-1923/?pdf=3915" rel="noopener">Dürrizâde Abdullah (1869-1923) — Sinan Başaran, Atatürk Ansiklopedisi, n.d.</a></li></ul>
+    
+  </div>
+</li>
+<li class="row" id="s36">
+  <div class="seal">S36</div>
+  <div class="body">
+    <p class="claim">In March 1923, months before the Republic was declared, Time magazine put Mustafa Kemal on its cover.</p>
+    <ul class="links"><li><a href="https://time.com/archive/6657226/foreign-news-the-near-east-2/" rel="noopener">Foreign News: THE NEAR EAST — TIME, 24 March 1923</a></li><li><a href="https://commons.wikimedia.org/wiki/File:Kemal_Ataturk_-_Time_1923.jpg" rel="noopener">Kemal Ataturk - Time 1923 (kapak) — Wikimedia Commons, PD-US-expired</a></li></ul>
+    <p class="quote">“Mustafa Kemal Atatürk on Time magazine in 1923”</p>
+  </div>
+</li>
+<li class="row" id="s37">
+  <div class="seal">S37</div>
+  <div class="body">
+    <p class="claim">After an eye injury in Libya in 1912, he was posted to Sofia, in Bulgaria, as a military attaché.</p>
+    <ul class="links"><li><a href="https://ataturkansiklopedisi.gov.tr/bilgi/trablusgarp-savasinda-ataturk/?pdf=3322" rel="noopener">Trablusgarp Savaşı’nda Atatürk — Hasan Taner Kerimoğlu, Atatürk Ansiklopedisi, n.d.</a></li></ul>
+    
+  </div>
+</li>
+<li class="row" id="s38">
+  <div class="seal">S38</div>
+  <div class="body">
+    <p class="claim">In May 1914, he went to a ball in Sofia dressed as a Janissary, a soldier of the old Ottoman army.</p>
+    <ul class="links"><li><a href="https://usam.arel.edu.tr/wp-content/uploads/2023/11/Ataturk-Albumu-1881-1938.pdf" rel="noopener">Atatürk Albümü (1881-1938) — haz. Ali Bilgin Varlık, İstanbul Arel Üniversitesi, 2023</a></li></ul>
+    
+  </div>
+</li>
+<li class="row" id="s39">
+  <div class="seal">S39</div>
+  <div class="body">
+    <p class="claim">On April 25th, retreating soldiers told him they had no ammunition left, and he answered that they still had bayonets.</p>
+    <ul class="links"><li><a href="https://dergipark.org.tr/tr/download/article-file/1568887" rel="noopener">Gelibolu’da Arıburnu Muharebeleri — Naim Babüroğlu, Karatay Sosyal Araştırmalar Dergisi 6, 2021</a></li></ul>
+    <p class="quote">““Ben size taarruzu emretmiyorum, ölmeyi emrediyorum.”</p>
+  </div>
+</li>
+<li class="row" id="s40">
+  <div class="seal">S40</div>
+  <div class="body">
+    <p class="claim">On August 10th, at Chunuk Bair, a piece of shrapnel hit him in the chest.</p>
+    <ul class="links"><li><a href="https://canakkaletarihialan.gov.tr/en/visit/martyrs-and-monuments/the-place-where-ataturks-watch-was-smashed" rel="noopener">The Place where Atatürk’s Watch was Smashed — Çanakkale Savaşları Gelibolu Tarihi Alan Başkanlığı, n.d.</a></li></ul>
+    <p class="quote">“the watch on his right breast saved him”</p>
+  </div>
+</li>
+</ol>
+
+<footer><p><strong>Narration:</strong> AI voice (ElevenLabs). <strong>Illustrations</strong> (three drawn scenes, among them the 1930s street, and five small cut-out objects: flowers, a gold watch, a bugle, a tram rail, a compass with a set square) generated with Google Gemini and printed in the channel's linocut style. <strong>Music:</strong> channel theme (Eleven Music).</p>
+<p><strong>Photos under Creative Commons</strong> (all printed in the channel's linocut style; crops and blurs noted): <a href="https://commons.wikimedia.org/wiki/File:10_Kas%C4%B1m_2017.jpg" rel="noopener">10 November 2017 street</a>, photo: E4024, CC BY-SA 4.0, via Wikimedia Commons, licence plates and logos blurred · <a href="https://commons.wikimedia.org/wiki/File:Turkish_flags_at_half_staff.jpg" rel="noopener">flags at half-mast, 2016</a>, photo: E4024, CC BY-SA 4.0, licence plates blurred · <a href="https://commons.wikimedia.org/wiki/File:An%C4%B1tkabir%2C_Ankara%2C_Turqu%C3%ADa%2C_2024-10-03%2C_DD_01.jpg" rel="noopener">Anıtkabir, 2024</a>, photo: Diego Delso, delso.photo, CC BY-SA 4.0 · <a href="https://commons.wikimedia.org/wiki/File:Dolmabah%C3%A7e_Palace_Garden_-_Istanbul%2C_2014.10.24_(6).JPG" rel="noopener">Dolmabahçe Palace garden, 2014</a>, photo: Derzsi Elekes Andor, CC BY-SA 4.0 · <a href="https://commons.wikimedia.org/wiki/File:Millet_Mektebi_%C5%9Fehadetnamesi%2C_1931.JPG" rel="noopener">Nation's School certificate, 1931</a>, photo: Cobija, CC BY-SA 3.0, portrait and name blurred · <a href="https://commons.wikimedia.org/wiki/File:Atat%C3%BCrk_Y%C3%BCr%C3%BCyen_K%C3%B6%C5%9Fk%2C_Yalova%2C_T%C3%BCrkiye.jpg" rel="noopener">Walking Mansion, Yalova, 2023</a>, photo: vlyalcin, CC BY-SA 4.0 · <a href="https://commons.wikimedia.org/wiki/File:Atat%C3%BCrk_TBMM%27de_Nutuk%27u_Okuyor.jpg" rel="noopener">Atatürk reading the Speech in parliament, 1927</a>, CC BY-SA 4.0, via Wikimedia Commons. Licences: <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="noopener">CC BY-SA 4.0</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0/" rel="noopener">CC BY-SA 3.0</a>.</p>
+<p><strong>Archive photos and documents:</strong> SALT Research and Turkey's Directorate General of Press and Information, via Flickr Commons (no known copyright restrictions); the Library of Congress (public domain); Ottoman and Turkish photographs, newspapers and books in the public domain via Wikimedia Commons, including Ulus, 10 November 1938, the 1937 Geometri, Servet-i Fünun, 1916, and Time, March 1923.</p><p><a class="back" href="../">← All exhibits</a></p></footer></main></body>
+</html>
